@@ -203,8 +203,7 @@ SELECT * FROM Customter_with_country WHERE RowNo <= 1
 
 
 /* Method 2: Using Recursive */
-
-WITH RECURSIVE 
+ 
 	customter_with_country AS (
 		SELECT customer.customer_id,first_name,last_name,billing_country,SUM(total) AS total_spending
 		FROM invoice
@@ -225,6 +224,4 @@ WHERE cc.total_spending = ms.max_spending
 ORDER BY 1;
 
 
-/* source: www.youtube.com/@RishabhMishraOfficial */
 
-/* Thank You :) */
